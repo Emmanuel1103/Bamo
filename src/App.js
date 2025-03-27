@@ -9,8 +9,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} /> {/* 🔥 Página principal */}
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<RegisterForm />} />
       </Routes>
     </Router>
   );
