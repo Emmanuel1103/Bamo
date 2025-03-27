@@ -1,0 +1,140 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enlaces sin subrayado */
+a {
+    text-decoration: none;
+}
+
+/* Contenido principal para evitar que el Navbar lo tape */
+.main-content {
+    margin-top: 80px; /* Ajusta el espacio después del Navbar */
+    padding: 20px;
+}
+
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0); /* Hacer el fondo semitransparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Clase que se activa al hacer scroll */
+.header.scrolled, .header.open  {
+    background:  rgb(8, 29, 50, 1); /* 🔥 Aumenta la opacidad */
+}
+
+/* Logo */
+.logo {
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilo de enlaces */
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: orange;
+}
+
+/* Línea de animación debajo de los enlaces */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: white;
+    transition: 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Icono de idioma */
+.language-icon {
+    font-size: 40px;
+    color: white;
+    background: rgb(8, 29, 50);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* 🔥 Responsive: Menú hamburguesa en móviles */
+/* Estilos para menú hamburguesa */
+.menu-icon {
+    display: none; /* Oculto en escritorio */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para móviles */
+/* 🔥 Estilos para el menú en móviles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(8, 29, 50, 0.7); /* 🔥 Fondo oscuro sólido */
+        text-align: center;
+        padding: 80px 0;
+        z-index: 999;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+
+    .navbar a {
+        display: block;
+        margin: 20px 0;
+        font-size: 22px;
+        color: white;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+}
