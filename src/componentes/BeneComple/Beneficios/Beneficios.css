@@ -1,0 +1,56 @@
+.seccion-beneficios {
+    background-color:transparent;
+    text-align: center;
+
+    padding-bottom: 70px;
+  }
+  
+  .titulo-beneficios {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+    color: #294356;
+  }
+  
+  .titulo-beneficios span {
+    color: #ff8c00;
+  }
+  
+  .contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .tarjeta {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid #ececec;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .icono-tarjeta {
+    font-size: 2.5rem;
+    color:#ff8c00;
+    margin-bottom: 0.5rem;
+  }
+  
+  .titulo-tarjeta {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #294356;
+  }
+  
+  .descripcion-tarjeta {
+    font-size: 0.9rem;
+    color: #555;
+  }

@@ -1,0 +1,127 @@
+.seccion-pasos {
+  width: 100vw;
+  padding: 0 3rem;
+  background: linear-gradient(to bottom, #fcedda, #ffffff);
+}
+
+.contenedor-pasos {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px; /* se redujo de 50px a 20px */
+}
+
+.titulo-pasos {
+  padding-top: 10px; /* reducido desde 40px */
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.titulo-pasos2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: orange;
+}
+
+.parrafo-pasos {
+  font-size: 15px;
+  padding: 20px 20px; /* reducido desde 35px */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo base para cada paso */
+.paso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 6rem; /* antes 12rem */
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+/* Invierte el orden para alternar */
+.paso.paso-inverso {
+  flex-direction: row-reverse;
+}
+
+/* Contenedor del texto */
+.texto-paso {
+  flex: 0 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Alineación derecha cuando es inverso */
+.paso-inverso .texto-paso {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.numero-paso {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #f38b00;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-individual {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.descripcion-paso {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 350px;
+}
+
+.imagen-paso {
+  flex: 0 1 250px;
+  max-width: 250px;
+  height: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .paso {
+    flex-direction: column !important;
+    gap: 2rem;
+    padding-bottom: 40px;
+  }
+
+  .texto-paso {
+    flex: 0;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .paso-inverso .texto-paso {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .descripcion-paso {
+    max-width: 100%;
+  }
+  .titulo-pasos2{
+    padding-bottom: 100px;
+  }
+
+  .parrafo-pasos{
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}

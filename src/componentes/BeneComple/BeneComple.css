@@ -1,0 +1,39 @@
+@keyframes subirFondo {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.seccion-beneficios-completa {
+  position: relative;
+  width: 100vw;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.seccion-beneficios-completa::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 79%;
+  background-color: #163157;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  z-index: 0;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.seccion-beneficios-completa.mostrar-fondo::before {
+  animation: subirFondo 0.8s forwards ease-out;
+}

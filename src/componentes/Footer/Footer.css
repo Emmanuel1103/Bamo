@@ -1,0 +1,140 @@
+.footer {
+  background-color: #071D33; 
+  color: white;
+  padding-left: 175px;
+  padding-right: 120px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100vw; 
+  box-sizing: border-box; 
+  overflow: hidden; 
+}
+
+.footer-header {
+  margin-bottom: 20px;
+}
+
+.footer-header h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.footer-header p {
+  font-size: 1.8rem;
+  padding-bottom: 5px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  width: 100%;
+  max-width: 1200px;
+  align-items: start;
+  text-align: left;
+  column-gap: 90px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación izquierda precisa */
+}
+
+.footer-section li{
+  padding-bottom: 7px;
+  font-size: 14px;
+  padding: 2px 0; /* Menos espacio entre ellos */
+  margin-bottom: 0px;
+}
+
+.footer-section li :hover{
+  color: orange;
+}
+
+.footer-section h4 {
+  margin-bottom: 7px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  padding-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.store-section {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.store-icon {
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 30px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-header {
+    margin-bottom: 30px;
+  }
+
+  .footer-header h3 {
+    font-size: 28px;
+  }
+
+  .footer-header h2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    text-align: left;
+    justify-items: flex-start;
+  }
+
+  .footer-section {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .footer-section li{
+    padding-bottom: 0px;
+  }
+
+  .store-section {
+    display: none;
+  }
+
+}
+
+
+

@@ -1,0 +1,166 @@
+/* Estilos base (ya estaban bien organizados, los dejé igual) */
+.sabias-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  background-image: url('./images/Patron.png');
+  background-position: center;
+  padding: 55px 350px;
+}
+
+.sabias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.01rem;
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+}
+
+.titulo-superior {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b2b2b;
+  text-align: left;
+}
+
+.sabias-texto {
+  flex: 1 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.frase-dinamica {
+  font-size: 1.1rem;
+  color: #333;
+  min-height: 80px;
+  max-width: 250px;
+  transition: opacity 0.5s ease-in-out;
+  margin-bottom: 1rem;
+  padding-bottom: 20px;
+}
+
+.elementos-fijos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.barra-tiempo {
+  width: 200px;
+  height: 6px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra-progreso {
+  height: 100%;
+  background-color: #f98f00;
+  transition: width 0.1s linear;
+}
+
+.descarga {
+  font-weight: bold;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+}
+
+.botones-store {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.botones-store img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.sabias-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 250px;
+  padding-top: 2rem;
+}
+
+.sabias-imagen img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.sabias-texto .resaltado {
+  color: #f98f00;
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .sabias-wrapper {
+    padding: 2rem 1rem;
+    background-size: cover;
+  }
+
+  .sabias-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .titulo-superior {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .sabias-texto {
+    order: 2;
+    align-items: center;
+    margin: 0;
+  }
+
+  .frase-dinamica {
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0;
+    min-height: unset;
+  }
+
+  .elementos-fijos {
+    align-items: center;
+  }
+
+  .barra-tiempo {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .descarga {
+    font-size: 1rem;
+  }
+
+  .botones-store {
+    justify-content: center;
+  }
+
+  .sabias-imagen {
+    order: 1;
+    padding-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  .sabias-imagen img {
+    max-width: 240px;
+  }
+}
