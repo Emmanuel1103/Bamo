@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import colombiaFlag from './images/colombia.jpg';
-import logo from './images/BamoLogo2.png';
+import logo from './images/BamoLogo.png';
 import './Navbar.css';
 
 export const Navbar = () => {
