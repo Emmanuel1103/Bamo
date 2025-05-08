@@ -22,9 +22,14 @@ export const Navbar = () => {
     <>
       {/* Navbar de escritorio */}
       <header className={`navbar-container ${menuOpen ? 'hidden-on-mobile' : ''}`}>
-        <Link to="/" className="navbar-logo">
-          <img src={logo} alt="Bamo Logo" />
-        </Link>
+        <div className="logo-wrapper">
+          <Link to="/" className="navbar-logo">
+            <img src={logo} alt="Bamo Logo" />
+          </Link>
+          <span className="logo-text">BAMO</span>
+        </div>
+        
+
 
         <div className="navbar-right">
           {/* Language selector solo para escritorio */}
