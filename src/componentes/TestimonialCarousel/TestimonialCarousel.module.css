@@ -1,0 +1,126 @@
+.carouselSection {
+  padding: 55px 200px;
+  font-family: 'Inter', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-image: url('./images/Patron.png');
+  background-position: center;
+}
+
+.carouselContainer {
+  position: relative;
+  padding: 0;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 10px;  /* menos margen a la izquierda */
+  right: 10px; /* menos margen a la derecha */
+  border-top: 4px dashed #2980b9;
+  transform: translateY(-50%);
+  height: 0;
+  border-radius: 0;
+}
+
+.stops {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 10px 0 10px; /* menos margen lateral */
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 20px); /* ocupar todo el ancho menos margen */
+}
+.title {
+  text-align: left;
+  font-weight: 700;
+  font-size: 70px;
+  color: #071d33;
+  padding-bottom: 50px;
+}
+
+.track {
+  position: relative;
+  height: 40px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  border-top: 6px dashed rgb(35, 65, 95); 
+  background: transparent;
+  border-radius: 0;
+  transform: translateY(-50%);
+}
+
+
+.stop {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background: #bdc3c7;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.activeStop {
+  background: #ff8c00;
+  box-shadow: 0 0 8px #071d33;
+}
+
+.bus {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.6rem;
+  transition: left 0.5s ease;
+  pointer-events: none;
+  user-select: none;
+
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.15rem;
+  text-align: left;
+  margin-bottom: 8px;
+  color: #ff8c00;
+  min-height: 3.2rem;
+}
+
+.user {
+  font-weight: 700;
+  text-align: left;
+  color: #34495e;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: left;
+  gap: 24px;
+}
+
+.buttons button {
+  background: #ff8c00;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 48px;
+  height: 48px;
+  border-radius: 10%;  /* <--- ESTO hace que sean círculos */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #ff8c00;
+}

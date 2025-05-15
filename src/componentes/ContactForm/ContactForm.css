@@ -1,0 +1,153 @@
+.contact-rectangle {
+  display: flex;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 111, 0, 0.3);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('./images/Patron.png');
+  background-position: center;
+}
+
+.contact-left {
+  flex: 1;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(135deg, #d17a37 25%, #ff6f00 75%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+  box-sizing: border-box;
+}
+
+.contact-left h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.contact-form label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+}
+
+.contact-form label svg {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  fill: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  flex-grow: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  color: #005f99;
+  background: white;
+  transition: box-shadow 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  box-shadow: 0 0 8px #ff6f00;
+}
+
+/* Tamaño y resizable textarea */
+.contact-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Flecha naranja personalizada para select */
+.contact-form select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23FF6F00' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px 8px;
+  padding-right: 40px; /* espacio para la flecha */
+}
+
+.icon {
+  color: #ffff;  /* Naranja BAmo */
+  font-size: 24px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.send-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  background: white;
+  color: #ff6f00;
+  border: 2px solid #ff6f00; /* borde naranja sólido de 2px */
+  padding: 14px 0;
+  border-radius: 30px;  
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 111, 0, 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.send-btn:hover {
+  background-color: #ff6f00;
+  color: white;
+  border-color: white;
+}
+
+.send-icon {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 3px #ff6f00);
+}
+
+.contact-right {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.95);
+  user-select: none;
+}
+
+.thanks-message {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkmark {
+  width: 72px;
+  filter: drop-shadow(0 0 8px white);
+}

@@ -1,4 +1,4 @@
-/* RESET BÁSICO Y ESTILO GLOBAL */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +6,10 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* CUERPO DEL DOCUMENTO */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  min-width: 320px; /* Evita que el diseño se rompa al hacer demasiado zoom out */
+  min-width: 320px;
 }
 
 body {
@@ -18,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow-x: hidden; /* Elimina scroll horizontal */
+  overflow-x: hidden; 
   overflow-y: auto;
   width: 100%;
   background-color: #fff;
