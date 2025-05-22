@@ -173,7 +173,7 @@ li {
   background-color: #e67600;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .carousel-container {
     padding: 0 1rem;
@@ -285,9 +285,3 @@ li {
     height: 6px;
   }
 }
-
-
-
-
-
-

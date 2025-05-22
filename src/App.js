@@ -1,30 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./componentes/Navbar/Navbar.jsx";
-import Banner from "./componentes/Banner/Banner.jsx";
-import Footer from "./componentes/Footer/Footer.jsx";
-import Pasos from "./componentes/Pasos/Pasos.jsx";
-import Bene from "./componentes/BeneComple/BeneComple.jsx";
-import SabiasQue from "./componentes/Sabiasque/SabiasQue.jsx";
-import TestimonialCarousel from "./componentes/TestimonialCarousel/TestimonialCarousel.jsx";
-import ContactForm from "./componentes/ContactForm/ContactForm.jsx";
-
-
+import Home from "./Home.js";
+import Contactanos from "./Contactanos.js";
+import Nosotros from "./Nosotros.js";
 
 function App() {
   return (
     <Router>
-      <Navbar />  
-      <Banner />
-      <Pasos/>
-      <Bene/>
-      <TestimonialCarousel/>
-      <ContactForm/>
-      <SabiasQue/>
-      <Footer />
-
       <Routes>
-        <Route path="/hola" element={<Banner />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/contacto" element={<Contactanos />} />
+        <Route path="/nosotros" element={<Nosotros/>} />
       </Routes>
     </Router>
   );

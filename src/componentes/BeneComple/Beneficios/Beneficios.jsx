@@ -1,6 +1,6 @@
 import React from 'react';
 import './Beneficios.css';
-import { FaClock, FaShieldAlt, FaMoneyBillWave, FaMobileAlt } from 'react-icons/fa'; // usando react-icons
+import { FaClock, FaShieldAlt, FaMoneyBillWave, FaMobileAlt } from 'react-icons/fa'; 
 
 const Beneficios = () => {
   return (

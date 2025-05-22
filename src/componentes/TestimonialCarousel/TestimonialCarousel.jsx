@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './TestimonialCarousel.module.css';
 import testimonials from './testimonialData';
+import logo from './images/BamoLogo.png';
 
 export default function TestimonialCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,10 +20,8 @@ export default function TestimonialCarousel() {
 
       <div className={styles.carouselContainer}>
         <div className={styles.track}>
-          {/* Línea */}
           <div className={styles.line}></div>
 
-          {/* Paradas */}
           {testimonials.map((_, idx) => (
             <div
               key={idx}
@@ -31,17 +30,15 @@ export default function TestimonialCarousel() {
             />
           ))}
 
-          {/* Bus indicador */}
           <div
             className={styles.bus}
             style={{ left: `${(activeIndex / (testimonials.length - 1)) * 100}%` }}
             aria-label={`Bus en parada ${activeIndex + 1}`}
           >
-            🚌
+            <img src={logo} />
           </div>
         </div>
 
-        {/* Opinión */}
         <blockquote className={styles.quote}>
           “{testimonials[activeIndex].opinion}”
         </blockquote>
@@ -49,7 +46,6 @@ export default function TestimonialCarousel() {
           👤 {testimonials[activeIndex].name} - {testimonials[activeIndex].city}
         </p>
 
-        {/* Botones */}
         <div className={styles.buttons}>
           <button onClick={prevTestimonial} aria-label="Testimonio anterior">
             ❮

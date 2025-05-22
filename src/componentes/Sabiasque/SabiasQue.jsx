@@ -3,6 +3,7 @@ import "./SabiasQue.css";
 import chicaBus from "./images/ChicaBus.png";
 import googlePlay from "./images/Google.png";
 import appStore from "./images/Apple.png";
+import BotonContacto from "./BotonContacto/BotonContacto.jsx";
 
 const frases = [
   "Latinoamérica depende en gran medida del transporte público, pero muchas veces es ineficiente, incierto y estresante.",
@@ -31,6 +32,7 @@ const SabiasQue = () => {
     };
   }, []);
 
+
   return (
     <section className="sabias-wrapper">
       <div className="sabias-container">
@@ -42,9 +44,9 @@ const SabiasQue = () => {
                 key={index}
                 className={
                   word.toLowerCase().includes("bam") ||
-                  word.toLowerCase().includes("depende") ||
-                  word.toLowerCase().includes("60%") ||
-                  word.toLowerCase().includes("tiempo")
+                    word.toLowerCase().includes("depende") ||
+                    word.toLowerCase().includes("60%") ||
+                    word.toLowerCase().includes("tiempo")
                     ? "resaltado"
                     : ""
                 }
@@ -76,6 +78,7 @@ const SabiasQue = () => {
       </div>
     </section>
   );
+
 };
 
 export default SabiasQue;

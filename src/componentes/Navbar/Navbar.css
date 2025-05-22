@@ -1,17 +1,18 @@
-/* NAVBAR DESKTOP */
+
 .navbar-container {
   width: 100%;
   height: 80px;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 28px 150px 20px 150px; /* Más espacio arriba, igual a los lados y abajo */
+  padding: 28px 150px 20px 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
   background-color: #ff8c00;
 }
+
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -22,12 +23,13 @@
   font-size: 32px;
   font-weight: bold;
   color: white;
-  text-decoration: none; /* Elimina la línea subrayada */
+  text-decoration: none;
 }
 
 .navbar-logo img {
   width: 55px;
 }
+
 .logo-wrapper {
   display: flex;
   align-items: center;
@@ -90,7 +92,6 @@
   display: block;
 }
 
-/* BURBUJA DROPDOWN */
 .dropdown-menu {
   position: absolute;
   top: 80px;
@@ -148,7 +149,6 @@
   color: orange;
 }
 
-/* MENÚ MÓVIL */
 .side-menu {
   position: fixed;
   top: 0;
@@ -175,7 +175,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2; 
+  opacity: 0.2;
 }
 
 
@@ -184,6 +184,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -258,17 +259,14 @@
     gap: 0.5rem;
   }
 
-  /* Oculta el selector de idioma solo en la barra principal */
   .navbar-right .language-selector {
     display: none;
   }
 
-  /* Oculta el menú desplegable en móviles */
   .dropdown-menu {
     display: none;
   }
 
-  /* Botón hamburguesa solo visible en móvil */
   .menu-button.desktop-only {
     display: none;
   }
@@ -286,9 +284,7 @@
     cursor: pointer;
   }
 
-  /* El idioma dentro del menú hamburguesa se muestra normalmente */
   .side-menu .language-selector {
     display: flex;
   }
 }
-

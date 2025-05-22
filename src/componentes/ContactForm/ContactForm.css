@@ -3,11 +3,11 @@
   max-width: 1200px;
   margin: 3rem auto;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(255, 111, 0, 0.3);
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
-  background-image: url('./images/Patron.png');
-  background-position: center;
+  padding: 50px 0px;
+  gap: 0;
+  flex-wrap: nowrap;
 }
 
 .contact-left {
@@ -69,23 +69,21 @@
   box-shadow: 0 0 8px #ff6f00;
 }
 
-/* Tamaño y resizable textarea */
 .contact-form textarea {
   min-height: 90px;
   resize: vertical;
 }
 
-/* Flecha naranja personalizada para select */
 .contact-form select {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23FF6F00' stroke-width='2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 15px center;
   background-size: 12px 8px;
-  padding-right: 40px; /* espacio para la flecha */
+  padding-right: 40px;
 }
 
 .icon {
-  color: #ffff;  /* Naranja BAmo */
+  color: #ffff;
   font-size: 24px;
   margin-right: 8px;
   flex-shrink: 0;
@@ -96,9 +94,9 @@
   width: 100%;
   background: white;
   color: #ff6f00;
-  border: 2px solid #ff6f00; /* borde naranja sólido de 2px */
+  border: 2px solid #ff6f00;
   padding: 14px 0;
-  border-radius: 30px;  
+  border-radius: 30px;
   font-weight: 700;
   font-size: 1.3rem;
   display: flex;
@@ -150,4 +148,66 @@
 .checkmark {
   width: 72px;
   filter: drop-shadow(0 0 8px white);
+}
+
+@media (max-width: 900px) {
+  .contact-rectangle {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: none;
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-left h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form label {
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .send-btn {
+    font-size: 1.1rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-left {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form label svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .send-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
 }

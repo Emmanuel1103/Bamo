@@ -6,30 +6,39 @@
   background-position: center;
 }
 
+/* Layout principal */
 .carouselContainer {
   position: relative;
   padding: 0;
 }
 
+.carouselContainer img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
 .line {
   position: absolute;
   top: 50%;
-  left: 10px;  /* menos margen a la izquierda */
-  right: 10px; /* menos margen a la derecha */
-  border-top: 4px dashed #2980b9;
-  transform: translateY(-50%);
-  height: 0;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  border-top: 6px dashed rgb(35, 65, 95);
+  background: transparent;
   border-radius: 0;
+  transform: translateY(-50%);
 }
 
 .stops {
   display: flex;
   justify-content: space-between;
-  margin: 40px 10px 0 10px; /* menos margen lateral */
+  margin: 40px 10px 0 10px;
   position: relative;
   z-index: 2;
-  width: calc(100% - 20px); /* ocupar todo el ancho menos margen */
+  width: calc(100% - 20px);
 }
+
 .title {
   text-align: left;
   font-weight: 700;
@@ -44,19 +53,6 @@
   margin-left: 40px;
   margin-bottom: 40px;
 }
-
-.line {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 5%;
-  height: 4px;
-  border-top: 6px dashed rgb(35, 65, 95); 
-  background: transparent;
-  border-radius: 0;
-  transform: translateY(-50%);
-}
-
 
 .stop {
   position: absolute;
@@ -83,8 +79,9 @@
   transition: left 0.5s ease;
   pointer-events: none;
   user-select: none;
-
 }
+
+
 
 .quote {
   font-style: italic;
@@ -116,11 +113,115 @@
   font-weight: 700;
   width: 48px;
   height: 48px;
-  border-radius: 10%;  /* <--- ESTO hace que sean círculos */
+  border-radius: 10%;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .buttons button:hover {
   background-color: #ff8c00;
+}
+
+@media (max-width: 1200px) {
+  .carouselSection {
+    padding: 45px;
+  }
+
+  .carouselContainer img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .title {
+    font-size: 50px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselSection {
+    padding: 50px;
+  }
+
+  .carouselContainer img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .title {
+    font-size: 36px;
+    padding-bottom: 25px;
+  }
+
+  .quote {
+    font-size: 1rem;
+    min-height: auto;
+  }
+
+  .buttons button {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .track {
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+
+  .stop {
+    width: 35px;
+    height: 35px;
+  }
+
+  .bus {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselSection {
+    padding: 40px;
+  }
+
+  .carouselContainer img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .title {
+    font-size: 28px;
+    padding-bottom: 20px;
+  }
+
+  .quote {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .buttons button {
+    font-size: 1rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .stop {
+    width: 28px;
+    height: 28px;
+  }
+
+  .track {
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }
+
+  .bus {
+    font-size: 1.6rem;
+  }
 }

@@ -8,11 +8,11 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 20px; /* se redujo de 50px a 20px */
+  padding: 0 20px;
 }
 
 .titulo-pasos {
-  padding-top: 10px; /* reducido desde 40px */
+  padding-top: 10px;
   font-size: 30px;
   font-weight: bold;
 }
@@ -25,28 +25,26 @@
 
 .parrafo-pasos {
   font-size: 15px;
-  padding: 20px 20px; /* reducido desde 35px */
+  padding: 20px 20px;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Estilo base para cada paso */
+
 .paso {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  gap: 6rem; /* antes 12rem */
+  gap: 6rem;
   flex-wrap: wrap;
   padding-bottom: 40px;
 }
 
-/* Invierte el orden para alternar */
 .paso.paso-inverso {
   flex-direction: row-reverse;
 }
 
-/* Contenedor del texto */
 .texto-paso {
   flex: 0 1 400px;
   display: flex;
@@ -55,7 +53,6 @@
   text-align: left;
 }
 
-/* Alineación derecha cuando es inverso */
 .paso-inverso .texto-paso {
   align-items: flex-end;
   text-align: right;
@@ -94,7 +91,6 @@
   height: auto;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .paso {
     flex-direction: column !important;
@@ -116,11 +112,12 @@
   .descripcion-paso {
     max-width: 100%;
   }
-  .titulo-pasos2{
+
+  .titulo-pasos2 {
     padding-bottom: 100px;
   }
 
-  .parrafo-pasos{
+  .parrafo-pasos {
     padding-top: 100px;
     padding-bottom: 40px;
   }

@@ -45,9 +45,8 @@ export const Navbar = () => {
 
           <div className={`dropdown-menu ${dropdownOpen ? 'animate-dropdown' : ''}`}>
             <ul>
-              <li><Link to="/quienes-somos">¿Quiénes somos?</Link></li>
-              <li><Link to="/login">Iniciar sesión</Link></li>
-              <li><Link to="/register">Registrarse</Link></li>
+              <li><Link to="/nosotros">¿Quiénes somos?</Link></li>
+              <li><Link to="/contacto">Contacto</Link></li>
             </ul>
           </div>
         </div>
@@ -76,9 +75,8 @@ export const Navbar = () => {
           </div>
 
           <ul>
-            <li><Link to="/quienes-somos" onClick={toggleMenu}>¿Quiénes somos?</Link></li>
-            <li><Link to="/login" onClick={toggleMenu}>Iniciar sesión</Link></li>
-            <li><Link to="/register" onClick={toggleMenu}>Registrarse</Link></li>
+            <li><Link to="/nosotros" onClick={toggleMenu}>¿Quiénes somos?</Link></li>
+            <li><Link to="/contacto" onClick={toggleMenu}>Contacto</Link></li>
           </ul>
         </div>
       )}
