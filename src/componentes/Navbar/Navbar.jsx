@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
-import { IoClose } from "react-icons/io5";
 import colombiaFlag from './images/colombia.jpg';
 import logo from './images/BamoLogo.png';
 import './Navbar.css';
@@ -16,11 +15,11 @@ export const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+    setDropdownOpen(false);
   };
 
   return (
     <>
-      {/* Navbar de escritorio */}
       <header className={`navbar-container ${menuOpen ? 'hidden-on-mobile' : ''}`}>
         <div className="logo-wrapper">
           <Link to="/" className="navbar-logo">
@@ -28,17 +27,13 @@ export const Navbar = () => {
           </Link>
           <span className="logo-text">BAMO</span>
         </div>
-        
-
 
         <div className="navbar-right">
-          {/* Language selector solo para escritorio */}
           <div className="language-selector">
             <img src={colombiaFlag} alt="Colombia" />
             <span>Es</span>
           </div>
 
-          {/* Menú desplegable solo escritorio */}
           <div className="menu-button desktop-only" onClick={() => setDropdownOpen(!dropdownOpen)}>
             <FiMenu />
           </div>
@@ -52,7 +47,6 @@ export const Navbar = () => {
         </div>
       </header>
 
-      {/* Top bar móvil con idioma y hamburguesa */}
       <div className="mobile-top-bar">
         <div className="language-selector">
           <img src={colombiaFlag} alt="Colombia" />
@@ -60,11 +54,10 @@ export const Navbar = () => {
         </div>
 
         <div className="menu-button mobile-only" onClick={toggleMenu}>
-          {menuOpen ? <IoClose /> : <FiMenu />}
+          <FiMenu />
         </div>
       </div>
 
-      {/* Menú móvil a pantalla completa */}
       {menuOpen && (
         <div className="side-menu open">
           <img src={logo} alt="Bamo Logo" className="mobile-logo" />
